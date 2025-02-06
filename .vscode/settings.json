@@ -1,4 +1,35 @@
 {
     "appService.defaultWebAppToDeploy": "/subscriptions/336a550b-1717-4786-8d39-13201277c1f4/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/MajczynaProject",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "appService.zipIgnorePattern": [
+        "__pycache__{,/**}",
+        "*.py[cod]",
+        "*$py.class",
+        ".Python{,/**}",
+        "build{,/**}",
+        "develop-eggs{,/**}",
+        "dist{,/**}",
+        "downloads{,/**}",
+        "eggs{,/**}",
+        ".eggs{,/**}",
+        "lib{,/**}",
+        "lib64{,/**}",
+        "parts{,/**}",
+        "sdist{,/**}",
+        "var{,/**}",
+        "wheels{,/**}",
+        "share/python-wheels{,/**}",
+        "*.egg-info{,/**}",
+        ".installed.cfg",
+        "*.egg",
+        "MANIFEST",
+        ".env{,/**}",
+        ".venv{,/**}",
+        "env{,/**}",
+        "venv{,/**}",
+        "ENV{,/**}",
+        "env.bak{,/**}",
+        "venv.bak{,/**}",
+        ".vscode{,/**}"
+    ]
 }
