@@ -65,16 +65,16 @@ media_data = [
 # conn.commit()
 # print("Inserted sample media data successfully!")
 
-cursor.execute("SELECT * FROM Media")
-rows = cursor.fetchall()
+# cursor.execute("SELECT * FROM Media")
+# rows = cursor.fetchall()
 
-print("\n📌 Media Entries in Database:")
-for row in rows:
-    print(f"ID: {row.id}, Name: {row.name}, Type: {row.type}, Status: {row.status}, Score: {row.score}")
+# print("\n📌 Media Entries in Database:")
+# for row in rows:
+#     print(f"ID: {row.id}, Name: {row.name}, Type: {row.type}, Status: {row.status}, Score: {row.score}")
 
-cursor.close()
-conn.close()
-print("Connection closed.")
+# cursor.close()
+# conn.close()
+# print("Connection closed.")
 
 
 def get_media_by_type(media_type):
