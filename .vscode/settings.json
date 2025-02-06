@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/336a550b-1717-4786-8d39-13201277c1f4/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/MajczynaProject",
+    "appService.deploySubpath": "."
+}
