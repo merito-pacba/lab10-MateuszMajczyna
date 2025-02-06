@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Media - {{ media_type }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        label, select, input, button { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h2>Add New Media: {{ media_type }}</h2>
+
+    <form action="/add_media/{{ media_type }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="wishlist">Wishlist</option>
+            <option value="playing">Playing</option>
+            <option value="finished">Finished</option>
+            <option value="abandoned">Abandoned</option>
+        </select><br>
+
+        <label for="score">Score:</label>
+        <select id="score" name="score" required>
+            {% for i in range(11) %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Add Media</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('display_media', media_type=media_type) }}">
+        <button>Back to {{ media_type }} List</button>
+    </a>
+</body>
+</html>

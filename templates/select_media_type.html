@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Media Type</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        label, select, button { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h2>Select Media Type</h2>
+    
+    <form action="/" method="POST">
+        <label for="media_type">Choose a media type:</label>
+        <select name="media_type" id="media_type">
+            <option value="Movie">Movie</option>
+            <option value="TV Show">TV Show</option>
+            <option value="Anime">Anime</option>
+            <option value="Game">Game</option>
+        </select>
+        <br>
+        <button type="submit">View Media</button>
+    </form>
+</body>
+</html>

@@ -13,7 +13,7 @@ $password = "WhooptyDoo2000!!!"    # use long (> 14 characters) and complicated 
 $serverName = "server-$(Get-Random)"
 
 # The sample database name
-$databaseName = "MediaDB"
+$databaseName = "mySampleDatabase"
 
 # The ip address range that you want to allow to access your server
 $startIp = "0.0.0.0"
