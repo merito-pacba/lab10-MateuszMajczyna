@@ -4,24 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Media Type</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        label, select, button { margin: 10px 0; }
-    </style>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
-<body>
-    <h2>Select Media Type</h2>
-    
-    <form action="/" method="POST">
-        <label for="media_type">Choose a media type:</label>
-        <select name="media_type" id="media_type">
-            <option value="Movie">Movie</option>
-            <option value="TV Show">TV Show</option>
-            <option value="Anime">Anime</option>
-            <option value="Game">Game</option>
-        </select>
-        <br>
-        <button type="submit">View Media</button>
-    </form>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Media Tracker</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Select Media Type</h2>
+
+        <div class="row justify-content-center">
+            <!-- Games -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🎮 Games</h5>
+                        <p class="card-text">Track the games you play.</p>
+                        <a href="{{ url_for('display_media', media_type='games') }}" class="btn btn-primary">View Games</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movies -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🎬 Movies</h5>
+                        <p class="card-text">Keep track of movies you've watched.</p>
+                        <a href="{{ url_for('display_media', media_type='movies') }}" class="btn btn-primary">View Movies</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Books -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📚 Books</h5>
+                        <p class="card-text">Organize your reading list.</p>
+                        <a href="{{ url_for('display_media', media_type='books') }}" class="btn btn-primary">View Books</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TV Shows -->
+            <div class="col-md-4 mt-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📺 TV Shows</h5>
+                        <p class="card-text">Track the series you watch.</p>
+                        <a href="{{ url_for('display_media', media_type='tv_shows') }}" class="btn btn-primary">View TV Shows</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anime -->
+            <div class="col-md-4 mt-3">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🎭 Anime</h5>
+                        <p class="card-text">Keep track of anime series.</p>
+                        <a href="{{ url_for('display_media', media_type='anime') }}" class="btn btn-primary">View Anime</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
