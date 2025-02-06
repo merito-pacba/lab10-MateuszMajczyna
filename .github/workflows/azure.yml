@@ -1,0 +1,32 @@
+name: Azure Flask App Deploy
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to the `main` branch (or master branch)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Runs the job on the latest Ubuntu image
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Checkout the code from the repository
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'  # You can specify the Python version you are using
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Install the required dependencies from requirements.txt
+
+    - name: Build and deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: MATEUSZPROJECT  # Replace with the name of your Azure app
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # The publish profile secret
+        package: .  # Deploy the entire repository
+
